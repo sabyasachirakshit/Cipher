@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blowfish Encryption Website</title>
+    <style>
+        #plaintext {
+            width: 676px;
+            height: 189px;
+        }
+
+        #ciphertext {
+            width: 676px;
+            height: 160px;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="plaintext" id="plaintext" cols="30" rows="10" placeholder="Enter PlainText here"></textarea>
+    <input type="password" name="secretkey" id="secretkey" placeholder="Enter Secret Key">
+    <button onclick="Encryption()">Encrypt</button>
+    <button onclick="Decryption()">Decrypt</button>
+    <textarea name="ciphertext" id="ciphertext" cols="30" rows="10" placeholder="Enter CipherText here"></textarea>
+    <script src="test.js"></script>
+    <script src="aes.js"></script>
+</body>
+
+</html>
