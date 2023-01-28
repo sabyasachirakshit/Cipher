@@ -8,23 +8,52 @@
     <title>Blowfish Encryption Website</title>
     <style>
         #plaintext {
-            width: 676px;
-            height: 189px;
+            width: 557px;
+            height: 188px;
+            margin-right: 4px;
         }
 
         #ciphertext {
-            width: 676px;
-            height: 160px;
+            width: 647px;
+            height: 188px;
+        }
+
+        .boxes {
+            display: flex;
+        }
+
+        #cc {
+            position: absolute;
+            left: 47%;
+        }
+
+        .op {
+            margin-top: 1%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .obj {
+            margin-right: 5px;
         }
     </style>
 </head>
 
 <body>
-    <textarea name="plaintext" id="plaintext" cols="30" rows="10" placeholder="Enter PlainText here"></textarea>
-    <input type="password" name="secretkey" id="secretkey" placeholder="Enter Secret Key">
-    <button onclick="Encryption()">Encrypt</button>
-    <button onclick="Decryption()">Decrypt</button>
-    <textarea name="ciphertext" id="ciphertext" cols="30" rows="10" placeholder="Enter CipherText here"></textarea>
+    <div class="boxes">
+        <textarea name="plaintext" id="plaintext" cols="30" rows="10" placeholder="Enter PlainText here"></textarea>
+        <textarea name="ciphertext" id="ciphertext" cols="30" rows="10" placeholder="Enter CipherText here"></textarea>
+    </div>
+    <br>
+    <button id="cp">Copy PlainText</button><button id="cc">Copy CipherText</button><br>
+    <div class="op">
+        <input class="obj" type="password" name="secretkey" id="secretkey" placeholder="Enter Secret Key">
+        <button class="obj" onclick="Encryption()">Encrypt</button>
+        <button class="obj" onclick="Decryption()">Decrypt</button>
+    </div>
+
+
     <script src="test.js"></script>
     <script src="aes.js"></script>
 </body>

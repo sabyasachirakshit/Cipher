@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "crypto-js": "^4.1.1",
-    "uglify-js": "^3.17.4"
-  }
-}

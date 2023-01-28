@@ -14,3 +14,13 @@ function Decryption() {
     CryptoJS.enc.Utf8
   );
 }
+
+document.getElementById("cp").onclick = function () {
+  document.getElementById("plaintext").select();
+  document.execCommand("copy");
+};
+
+document.getElementById("cc").onclick = function () {
+  document.getElementById("ciphertext").select();
+  document.execCommand("copy");
+};
