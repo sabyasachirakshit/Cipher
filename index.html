@@ -7,27 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blowfish Encryption Website</title>
     <style>
+        body {
+            background-image: url('hood.jpg');
+
+        }
+
         #plaintext {
-            width: 557px;
-            height: 188px;
+            background-color: black;
+            color: white;
+            width: 500px;
+            height: 200px;
             margin-right: 4px;
+            margin-top: 70px;
+            margin-left: 50px;
         }
 
         #ciphertext {
-            width: 647px;
-            height: 188px;
+            background-color: black;
+            color: white;
+            margin-left: 50px;
+            width: 500px;
+            height: 200px;
+            margin-top: 70px;
         }
 
         .boxes {
+            margin: 30px;
+            height: 400px;
             display: flex;
+            background-color: rgba(44, 2, 2, 0.5);
         }
 
         #cc {
+            margin-left: 15px;
             position: absolute;
-            left: 42.5%;
+            left: 47.6%;
+            padding: 5px;
+
+            border-radius: 10px;
+        }
+
+        #cc:hover {
+            background-color: rgb(20, 219, 241);
+            color: white;
         }
 
         .op {
+
             margin-top: 1%;
             display: flex;
             justify-content: center;
@@ -35,7 +61,40 @@
         }
 
         .obj {
-            margin-right: 5px;
+            text-decoration: solid;
+            background-color: rgb(7, 120, 164);
+            position: relative;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .obj:hover {
+            background-color: rgb(42, 111, 111);
+            color: wheat;
+        }
+
+        .obj1 {
+            position: relative;
+            padding: 5px;
+        }
+
+        #cp {
+            position: absolute;
+            padding: 5px;
+            margin-left: 50px;
+            border-radius: 10px;
+        }
+
+        #cp:hover {
+            background-color: rgb(20, 219, 241);
+            color: white;
+        }
+
+        #secretkey {
+            border: 2px solid black;
+            margin: 10px;
+            padding: 10px;
         }
 
         @media(max-width:768px) {
@@ -55,6 +114,7 @@
             }
 
             #cc {
+
                 position: absolute;
                 left: 46.5%;
             }
@@ -77,15 +137,16 @@
     <div class="boxes">
         <textarea name="plaintext" id="plaintext" cols="30" rows="10" placeholder="Enter PlainText here"></textarea>
         <textarea name="ciphertext" id="ciphertext" cols="30" rows="10" placeholder="Enter CipherText here"></textarea>
+        <br>
+        <button id="cp">Copy PlainText</button><button id="cc">Copy CipherText</button>
+        <br>
     </div>
-    <br>
-    <button id="cp">Copy PlainText</button><button id="cc">Copy CipherText</button><br>
+
     <div class="op">
-        <input class="obj" type="password" name="secretkey" id="secretkey" placeholder="Enter Secret Key">
+        <input class="obj1" type="password" name="secretkey" id="secretkey" placeholder="Enter Secret Key">
         <button class="obj" onclick="Encryption()">Encrypt</button>
         <button class="obj" onclick="Decryption()">Decrypt</button>
     </div>
-
 
     <script src="test.js"></script>
     <script src="aes.js"></script>
