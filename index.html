@@ -14,7 +14,7 @@
 
         #plaintext {
             background-color: black;
-            color: white;
+            color: rgb(53,125,62);
             width: 500px;
             height: 200px;
             margin-right: 4px;
@@ -24,7 +24,7 @@
 
         #ciphertext {
             background-color: black;
-            color: white;
+            color: rgb(53,125,62);
             margin-left: 50px;
             width: 500px;
             height: 200px;
@@ -99,36 +99,89 @@
 
         @media(max-width:768px) {
             #plaintext {
-                width: 557px;
-                height: 188px;
-                margin-right: 4px;
-            }
+            background-color: black;
+            color: rgb(53,125,62);
+            width: 500px;
+            height: 200px;
+            margin-right: 4px;
+            margin-top: 70px;
+            margin-left: 50px;
+        }
 
-            #ciphertext {
-                width: 647px;
-                height: 188px;
-            }
+        #ciphertext {
+            background-color: black;
+            color: rgb(53,125,62);
+            margin-left: 50px;
+            width: 500px;
+            height: 200px;
+            margin-top: 70px;
+        }
 
-            .boxes {
-                display: flex;
-            }
+        .boxes {
+            margin: 30px;
+            height: 400px;
+            display: flex;
+            background-color: rgba(44, 2, 2, 0.5);
+        }
 
-            #cc {
+        #cc {
+            margin-left: 15px;
+            position: absolute;
+            left: 47.6%;
+            padding: 5px;
 
-                position: absolute;
-                left: 46.5%;
-            }
+            border-radius: 10px;
+        }
 
-            .op {
-                margin-top: 1%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
+        #cc:hover {
+            background-color: rgb(20, 219, 241);
+            color: white;
+        }
 
-            .obj {
-                margin-right: 5px;
-            }
+        .op {
+
+            margin-top: 1%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .obj {
+            text-decoration: solid;
+            background-color: rgb(7, 120, 164);
+            position: relative;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .obj:hover {
+            background-color: rgb(42, 111, 111);
+            color: wheat;
+        }
+
+        .obj1 {
+            position: relative;
+            padding: 5px;
+        }
+
+        #cp {
+            position: absolute;
+            padding: 5px;
+            margin-left: 50px;
+            border-radius: 10px;
+        }
+
+        #cp:hover {
+            background-color: rgb(20, 219, 241);
+            color: white;
+        }
+
+        #secretkey {
+            border: 2px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
         }
     </style>
 </head>
